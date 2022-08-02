@@ -324,7 +324,7 @@ const Shops=[{
         ImageOfitem:"offer/supermarket/Coconut Oil.jpeg"
     },{
         name:"Unrefined Coconut oil",
-        ImageOfitem:"offer/supermarket/images(4).jpeg"
+        ImageOfitem:"offer/supermarket/Unrefined.jpeg"
     }]
 },
 {
