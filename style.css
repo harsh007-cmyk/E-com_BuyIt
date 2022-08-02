@@ -1,0 +1,532 @@
+
+ *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #d4d9db;
+    margin: 0;
+}
+#home-header{
+    background-color: #0B0C10;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 6.5rem;
+    width: 100%;
+    margin-top: 0;
+}
+#logo{
+    background-color:#1F2833;
+    border:5px solid #C5C6C7;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    color:  #66FCF1;
+    font-size:30px ;
+    font-family:'prox';
+    font-weight: 50px;
+    font-style: oblique;
+    border-radius: 15px;
+    padding: 1px 2px 3px 4px;
+    text-align: center;
+}
+#atuo-complete{
+    height: 30px;
+    width: 50%;
+     background-color: rgb(127, 26, 26);
+     display: flex;
+     border-radius: 5px;
+     justify-content: space-between;
+     text-align: center;
+     flex-direction: column;
+}
+#search{
+    height: 30px;
+   width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    text-align: center;
+}
+.fa{
+    padding: 3px;
+    color:#FFCB9A;
+    background-color: #2C3531;
+    height: 100%px;
+    width: 25px;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.dropbtn {
+    background-color: #e1e1df;
+    color: rgb(15, 13, 13);
+    height: 100%;
+    width: 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: Verdana, sans-serif;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    color: rgb(26, 25, 25);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+#search-input{
+    width: 100%;
+    height: 100%;
+}
+
+.active-nav{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.nav-item{
+    margin: 35%;
+    font-size: 17px;
+    cursor: pointer;
+    
+}
+.firstDiv{
+    display: flex;
+}
+.shop-left{
+    background-image: url(gettyimages-1334822034-170667a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    width: 50%;
+    font-family: "Trebuchet MS", sans-"serif";
+    color: #FF00FF;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.shop-right{
+    background-image: url(photo-1607082348824-0a96f2a4b9da.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    font-family: "Arial Black", sans-serif;
+    width: 50%;
+    color:#FFFF00;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+#offer-div{
+    width: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+#offers{
+    display: flex;
+    margin-top:10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+.Offer{
+    margin: 2%;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    font-family: sans-serif;
+    color: red;
+    backdrop-filter: blur(100px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;    
+    background-color: rgba(0, 0,0 , 0.2);
+}
+footer{
+    height: 250px;
+    background-color: #232941;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 15px;
+
+}
+.KnowUs{
+    height: 60%;
+    width: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+.countries{
+    margin-top: 20px;
+}   
+.top-footer{
+    display: flex;
+    justify-content:space-between;
+} 
+.connect{
+    margin-left: 100px;
+}
+.shop-category{
+background-color: #ffffff;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    
+}
+.cardOfitem{
+    background-color: rgb(251, 156, 3);
+    width: 30%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.list img{
+    width: 100%;
+    height: 90%;
+    margin-bottom: auto;
+    border-radius: 5px;
+}
+.shop-category h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.m-active-nav{
+    display: none;
+}
+.m-photo{
+    display: none;
+}
+.nav-bar{
+    display: none;
+}
+
+
+
+.logo-Design{
+    background-color: red;
+    height: 100%;
+    width: 115px;
+    position: relative;
+    background-color: #0B0C10;
+}
+.login-logo{
+    background-color:#1F2833;
+    border:5px solid #C5C6C7;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    color:  #66FCF1;
+    font-size:30px ;
+    font-family:'prox';
+    font-weight: 50px;
+    font-style: oblique;
+    border-radius: 15px;
+    padding: 1px 2px 3px 4px;
+    text-align: center;
+}
+.Login-page{
+    background-color: aliceblue;
+    display: flex;
+    top: 25%;
+    left: 40%;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.Enter-contents{
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    position: relative;
+    font-family: sans-serif;
+    height: 100%;
+    justify-content: center;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+input.user-name{
+    background-color: aliceblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    border-bottom: 2px solid orange;
+    outline: none;
+
+}
+input.user-name:active{
+    border: none;
+    outline: none;
+
+}
+.submit{
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    background-color:orange;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+.outer-login{
+    background-color:rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.fa-window-close{
+    color:black;
+        border-radius: 0px;
+        margin-top: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        background-color:white;
+}
+.loign-window-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0px;
+    outline: hidden;
+    border-radius: 0px;
+    background-color:aliceblue;
+    color: black;
+    cursor: pointer;
+}
+.fa-window-close:hover{
+    transform: scale(1.1);
+}
+.submit:active{
+    color: red;
+}
+@media screen and (max-width:800px) {
+    .login-logo{
+        background-color:#1F2833;
+        border:5px solid #C5C6C7;
+        height: 50px;
+        margin-right: 5px;
+        width: 100px;
+        font-size:20px ;
+        box-sizing: border-box;
+    }
+    .Login-page{
+        width: 70%;
+        margin: 0px;
+        overflow: hidden;
+        left: 5%;
+    }
+    .Enter-contents{
+        position: relative;
+
+    }
+  
+    .logo-Design{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+}
+
+@media screen and (max-width:910px){
+    #logo{
+       
+        height: 50px;
+        width: 100px;
+        font-size:25px ;
+        
+    }
+    
+    .shop-right{
+        display: none;
+    }
+    .shop-left{
+        width: 100%;
+        display: none;
+    }
+    .list{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .active-nav{
+        display: none;
+    }
+    .m-active-nav{
+        display: block;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+    .m-photo{
+        display: block;
+        width: 100%;
+        height: 500px;
+        color: white;
+        font-family: "Trebuchet MS", sans-"serif";
+        color: #FF00FF;
+        font-size: 50px;
+        background: url('m-photo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .Offer{
+        width: 40%;
+        height: 300px;
+        font-size: 20px;
+    }
+    .cardOfitem{
+        background-color: rgb(178, 174, 174);
+        width: 30%;
+        height: 250px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+     
+    }
+    .home_Page{
+        position: relative;
+
+    }
+    .fa-bars{
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .m-active-nav{
+        position: absolute;
+        right:0;
+        margin-right: 0;
+        top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        background-color: rgb(86, 83, 83);
+        transition: 0.5s ease-in;
+    }
+    .nav-bar{
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+        height: 50px;
+        width: 50px;
+        color: white;
+    }
+    .responsive{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    
+    .Login-page{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    #offers{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 400px;
+    }
+    
+    
+    .logo-Design{
+        height: 30%;
+    }
+    .Enter-contents{
+        width: 100%;
+    }
+    .Enter-contents span{
+        padding: 5px;
+    }
+    input.user-name{
+        margin-bottom: 15px;
+    }
+    .submit{
+        width: 100%;
+        bottom: 0px;
+
+    }
+    .Offer{
+        height: 30%;
+        font-size: 10px;
+        
+    }
+    .list{
+        flex-direction:column ;
+    }
+    .cardOfitem{
+        width: 55%;
+        font-size: 12px;
+    }
+}
