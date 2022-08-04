@@ -23,30 +23,6 @@ const Shops=[{
         }
     ]
     
-},{
-    id:2,
-    category:"Bookstores",
-    nameOfshop:"Kennady's bookstore",
-    imageOfshop:"offer/Bookstall/Kennady's bookstore.jpg",
-    Data:[
-        { 
-            name:'Diary of Ann Frank',
-            ImageOfitem:'offer/Bookstall/Kennady/Ann Frank diary.jpg'
-        },
-        {
-            name:'Rich Dad Poor Dad',
-            ImageOfitem:'offer/Bookstall/Kennady/Rich Dad poor Dad.jpg'
-        },
-        {
-            name:'Sapiens',
-            ImageOfitem:'offer/Bookstall/Kennady/Sapiens.jpeg'
-        },
-        {
-            name:'Wings of Fire',
-            ImageOfitem:'offer/Bookstall/Kennady/wings of fire.jpg'
-        }
-    ]
-    
 },
 {
     id:2,
