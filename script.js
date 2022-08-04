@@ -128,10 +128,13 @@ function close_Login(){
 closeLogin.addEventListener('click',()=>{
 document.querySelector('.outer-login').style.display="none";
 })
-let login=document.querySelector('.login');
-login.addEventListener('click',()=>{
-    document.querySelector('.outer-login').style.display='flex';
-})
+let login=document.querySelectorAll('.login');
+login.forEach(element => {
+    element.addEventListener('click',()=>{
+        document.querySelector('.outer-login').style.display='flex';
+    })    
+});
+
 }
 
 
