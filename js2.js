@@ -9,7 +9,7 @@ if(loginDetails){
     
 }
 
-
+let Cartarray=[];
 
 let data=JSON.parse(localStorage.getItem('data'));
 console.log(data[0].ImageOfitem);
@@ -24,6 +24,7 @@ function createCard(){
         let button=document.createElement('button');
         button.addEventListener('click',addTocart);
         button.innerHTML="Add to card"
+        button.setAttribute('id',element.No)
         let nameOfitem=document.createElement('h3');
         nameOfitem.innerHTML=element.name;
         image.src=element.ImageOfitem;
@@ -49,3 +50,15 @@ function addTocart(){
     cart.innerHTML=NumberOfitemsIncart;
 }
 
+function addToCartPage(element){
+    let idnumber=element.id;
+    let cartItem=document.createElement('div');
+    cartItem.setAttribute('class','cartItem');
+    let cartImage=document.createElement('img');
+    cartImage.setAttribute('class','cartImage');
+    let NumberOfCartitem=document.createElement('span');
+    NumberOfCartitem.setAttribute('class','NumberOFcartItems');
+    let plusAndMinus=document.createElement('div');
+    plusAndMinus.innerHTML=`<i class="fa fa-plus" aria-hidden="true"></i><span class="increase"></span>`+`<i class="fa fa-minus" aria-hidden="true"></i><span class="decrease"></span>`
+    
+}

@@ -4,6 +4,31 @@ const Shops=[{
     nameOfshop:"Kennady's bookstall",
     imageOfshop:"offer/Bookstall/Kennady's bookstore.jpg",
     Data:[
+        {   No:1,
+            name:'Diary of Ann Frank',
+            ImageOfitem:'offer/Bookstall/Kennady/Ann Frank diary.jpg'
+        },
+        {   No:2,
+            name:'Rich Dad Poor Dad',
+            ImageOfitem:'offer/Bookstall/Kennady/Rich Dad poor Dad.jpg'
+        },
+        {   No:3,
+            name:'Sapiens',
+            ImageOfitem:'offer/Bookstall/Kennady/Sapiens.jpeg'
+        },
+        {
+            No:4,
+            name:'Wings of Fire',
+            ImageOfitem:'offer/Bookstall/Kennady/wings of fire.jpg'
+        }
+    ]
+    
+},{
+    id:2,
+    category:"Bookstores",
+    nameOfshop:"Kennady's bookstore",
+    imageOfshop:"offer/Bookstall/Kennady's bookstore.jpg",
+    Data:[
         { 
             name:'Diary of Ann Frank',
             ImageOfitem:'offer/Bookstall/Kennady/Ann Frank diary.jpg'
@@ -324,7 +349,7 @@ const Shops=[{
         ImageOfitem:"offer/supermarket/Coconut Oil.jpeg"
     },{
         name:"Unrefined Coconut oil",
-        ImageOfitem:"offer/supermarket/images(4).jpeg"
+        ImageOfitem:"offer/supermarket/Unrefined.jpeg"
     }]
 },
 {
@@ -410,9 +435,7 @@ const Shops=[{
         name:"Sambar Powder",
         ImageOfitem:"offer/supermarket/Sambar powder.jpeg"
     },] 
-},{
-    
-}
+},
 
 
 ]

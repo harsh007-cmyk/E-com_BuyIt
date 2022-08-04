@@ -160,8 +160,7 @@ function validateLogin(){
     }
 }
 
-let obj={a:'a',b:'b',c:'d'};
-console.log(obj);
+
 
 document.getElementById('search-input').addEventListener('input',searchInput);
  
@@ -169,3 +168,88 @@ function searchInput(e){
     const inputItem=e.target.value;
     
 }
+
+
+const inputBox=document.getElementById('search-input');
+const icon=document.querySelector('.fa-search');
+const listOfsug=document.getElementById('listOfsug');
+inputBox.onkeyup=(e)=>{
+    const searchValue=inputBox.value;
+    if(searchValue){
+        icon.onclick=()=>{
+            console.log("enter")
+            let lowerCaseinput=searchValue.toLocaleLowerCase();
+           Shops.forEach(element => {
+            let lowerCaseName=element.nameOfshop.toLocaleLowerCase();
+            if(lowerCaseName===lowerCaseinput ){
+              
+                console.log(element.id)
+                document.getElementById('search-Anchor').href=`#${element.id}`;
+                document.getElementById('search-Anchor').click();
+                document.getElementById('search-Anchor').href=`#`;
+                inputBox.value="";
+                document.querySelector('.sub-list').classList.remove('active');
+            }else{
+                document.querySelector('.sub-list').classList.remove('active');
+            }
+           });
+
+        }
+        let listOfSugs=Shops.filter((ele)=>{
+            return ele.nameOfshop.toLocaleLowerCase().startsWith(searchValue.toLocaleLowerCase());
+        }  )
+        console.log(listOfSugs)
+        listOfSugs=listOfSugs.map((data)=>{
+            return data=`<li class="listOfsearch">${data.nameOfshop}</li>`
+        })
+        if(listOfSugs.length){
+            document.querySelector('.sub-list').classList.add('active');
+        }else{
+            document.querySelector('.sub-list').classList.remove('active');
+        
+        }
+        console.log(listOfSugs);
+        showSug(listOfSugs);
+        if(listOfSugs){
+            let listOfsearch=document.querySelectorAll('.listOfsearch');
+            listOfsearch.forEach(element => {
+                console.log(element);
+                element.addEventListener('click',()=>{
+                   inputBox.value=element.textContent;
+                   let str=inputBox.value;
+                   Shops.forEach(element => {
+                        if(str===element.nameOfshop){
+                            console.log("harsh palajsaldfjafjajflajljas")
+                            document.getElementById('search-Anchor').href=`#${element.id}`;
+                            document.getElementById('search-Anchor').click();
+                            document.getElementById('search-Anchor').href=`#`;
+                            inputBox.value="";
+                            document.querySelector('.sub-list').classList.remove('active');
+                       
+                        }
+                   });
+                   
+                })
+            });
+        }
+       
+    }
+    else{
+        document.querySelector('.sub-list').classList.remove('active');
+    }
+
+   
+
+}
+
+function showSug(list){
+    let userData;
+    let listData;
+     if(list.length){
+          userData=inputBox.value;
+          listData=`<li>${userData}</li>`
+     }else{
+     listData=list.join('');
+     }
+     listOfsug.innerHTML=list;
+ }
