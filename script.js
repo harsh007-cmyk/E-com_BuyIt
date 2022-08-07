@@ -19,9 +19,8 @@ document.querySelector('.submit').addEventListener('click',validateLogin);
 
 
 
-console.log(offers);
+
 const todayOffer=document.getElementById("offers");
-console.log(todayOffer);
 offers.forEach(element => {
     const Div=document.createElement("div");
     const heading =document.createElement('h1');
@@ -29,7 +28,6 @@ offers.forEach(element => {
     const shop=document.createElement('h2');
     shop.setAttribute('class','shopname');
     if(element.Active){
-        console.log(element.Active===true)
         if(element.imageOfOffer){
         Div.style.backgroundImage=`linear-gradient(
             rgba(225, 225, 225, 0.5),
@@ -61,7 +59,6 @@ category.forEach(element => {
     divForCategory.setAttribute('class','shop-category');
     categoryHeading.setAttribute('id',element)
     divForCategory.appendChild(categoryHeading);
-    console.log(divForCategory);
     divForCategory.appendChild(lisOfshops);
     shopCategories.appendChild(divForCategory);
     Shops.forEach(ele => {
@@ -90,10 +87,7 @@ cardsOfshops.forEach(element => {
     element.addEventListener('click',(e)=>{
          localStorage.removeItem('data');
         Shops.forEach(ele => {
-            // console.log(ele);
             if(ele.id==e.target.id){
-                console.log("enter"+e.target.id);
-                console.log(ele);
                 localStorage.setItem("data",JSON.stringify(ele.Data));
                 window.location.href='index2.html';
             }
@@ -106,18 +100,11 @@ nav.addEventListener('click',Resposive);
 let nav_bar=document.querySelector('.fa-window-close');
 nav_bar.addEventListener('click',Resposive);
 function Resposive(){
-    console.log("harsh");
     let m_nav=document.getElementById("m-nav");
     m_nav.classList.toggle("responsive");
 }
  
 
-// const close=document.querySelector('.fa-window-close')
-
-// console.log(close);
-// close.addEventListener('click',()=>{
-//     console.log('harsh');
-// })
 const closeLogin=document.querySelector('.loign-window-close')
 if(closeLogin){
     close_Login();
@@ -142,10 +129,8 @@ function validateLogin(){
     let user=JSON.parse(localStorage.getItem('details_Of_user'))
     const password=document.querySelectorAll('.user-name')[1];
     const E_mail=document.querySelectorAll('.user-name')[0];
-    console.log(E_mail.value+"emaiillll");
     if(user.Registerd_E_mail===E_mail.value&&user.password===password.value){
         let loginobj={E_mail_login:E_mail.value,password_login:password.value};
-        console.log(loginobj+"harshpalathingalalalala") ;
         window.sessionStorage.setItem('login_details',JSON.stringify(loginobj));
         document.getElementById('login').innerHTML=signupDetails.Registerd_Name;
        
@@ -180,13 +165,11 @@ inputBox.onkeyup=(e)=>{
     const searchValue=inputBox.value;
     if(searchValue){
         icon.onclick=()=>{
-            console.log("enter")
             let lowerCaseinput=searchValue.toLocaleLowerCase();
            Shops.forEach(element => {
             let lowerCaseName=element.nameOfshop.toLocaleLowerCase();
             if(lowerCaseName===lowerCaseinput ){
               
-                console.log(element.id)
                 document.getElementById('search-Anchor').href=`#${element.id}`;
                 document.getElementById('search-Anchor').click();
                 document.getElementById('search-Anchor').href=`#`;
@@ -201,7 +184,6 @@ inputBox.onkeyup=(e)=>{
         let listOfSugs=Shops.filter((ele)=>{
             return ele.nameOfshop.toLocaleLowerCase().startsWith(searchValue.toLocaleLowerCase());
         }  )
-        console.log(listOfSugs)
         listOfSugs=listOfSugs.map((data)=>{
             return data=`<li class="listOfsearch">${data.nameOfshop}</li>`
         })
@@ -211,18 +193,15 @@ inputBox.onkeyup=(e)=>{
             document.querySelector('.sub-list').classList.remove('active');
         
         }
-        console.log(listOfSugs);
         showSug(listOfSugs);
         if(listOfSugs){
             let listOfsearch=document.querySelectorAll('.listOfsearch');
             listOfsearch.forEach(element => {
-                console.log(element);
                 element.addEventListener('click',()=>{
                    inputBox.value=element.textContent;
                    let str=inputBox.value;
                    Shops.forEach(element => {
                         if(str===element.nameOfshop){
-                            console.log("harsh palajsaldfjafjajflajljas")
                             document.getElementById('search-Anchor').href=`#${element.id}`;
                             document.getElementById('search-Anchor').click();
                             document.getElementById('search-Anchor').href=`#`;
@@ -254,5 +233,10 @@ function showSug(list){
      }else{
      listData=list.join('');
      }
-     listOfsug.innerHTML=list;
+     console.log(list);
+     listOfsug.innerHTML="";
+     list.forEach(element => {
+        listOfsug.innerHTML+=element+"<br>";   
+     });
+     
  }
