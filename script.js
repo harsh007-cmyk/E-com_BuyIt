@@ -126,6 +126,7 @@ login.forEach(element => {
 
 
 function validateLogin(){
+    document.getElementById('logo').click();
     let user=JSON.parse(localStorage.getItem('details_Of_user'))
     const password=document.querySelectorAll('.user-name')[1];
     const E_mail=document.querySelectorAll('.user-name')[0];
@@ -143,7 +144,7 @@ function validateLogin(){
         else if(!password){
             alert('please enter password');
         }
-        else if(signupDetails.Registerd_E_mail!=E_mail||signupDetails.password!=password)
+        else if(!signupDetails||signupDetails.Registerd_E_mail!=E_mail||signupDetails.password!=password)
         alert('E-mail and password is not matching');
     }
 }
