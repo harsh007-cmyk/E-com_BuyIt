@@ -63,7 +63,14 @@ category.forEach(element => {
     shopCategories.appendChild(divForCategory);
     Shops.forEach(ele => {
         if(ele.category===element){
+            let nextButton=document.createElement('button');
+            nextButton.setAttribute('class','next');
+            let prevButton=document.createElement('button');
+            nextButton.setAttribute('class','prev');
+
             let cardOfshop=document.createElement('div');
+            let slideLen=cardOfshop.clientWidth;
+
             cardOfshop.setAttribute('class','cardOfitem');
             cardOfshop.setAttribute('id',ele.id);
             let imageOfitem=document.createElement('div');

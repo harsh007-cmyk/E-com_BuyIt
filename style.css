@@ -265,7 +265,6 @@ align-items: center;
     display: flex;
     justify-content: space-around;
     overflow-y: hidden;
-    background-color: red;
     height: 15rem;
     gap:20px;
 }
