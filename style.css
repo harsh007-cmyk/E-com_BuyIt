@@ -4,7 +4,7 @@
 }
 body{
     margin: 0;
-    background-color: #d4d9db;
+    background-color: #fbfdfd;
     margin: 0;
 }
 .sub-list{
@@ -90,7 +90,11 @@ body{
     font-size: 20px;
     border-radius: 0 5px 5px 0;
 }
-
+.shops{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .dropbtn {
     background-color: #e1e1df;
     color: rgb(15, 13, 13);
@@ -183,7 +187,7 @@ body{
     width: 100%;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: 1.5rem;  
 }
 #offers{
     display: flex;
@@ -196,7 +200,7 @@ body{
 .Offer{
     margin: 2%;
     width: 300px;
-    height: 400px;
+    height: 15rem;
     background-size: cover;
     font-family: sans-serif;
     color: red;
@@ -236,21 +240,31 @@ footer{
 }
 .shop-category{
 background-color: #ffffff;
+overflow-x: scroll;
+width: 95%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-bottom: 5rem;
+margin-top: 2rem;
+align-items: center;
 }
 .list{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    position: relative;
-    
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    background-color: red;
+    width: 100%;
+    height: 15rem;
 }
 .cardOfitem{
     background-color: rgb(251, 156, 3);
-    width: 30%;
-    height: 320px;
+    width: 200px;
+    max-height: 13rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 10px;
     border-radius: 10px;
@@ -260,12 +274,13 @@ background-color: #ffffff;
 }
 .list img{
     width: 100%;
-    height: 90%;
+    height: 15rem;
     margin-bottom: auto;
     border-radius: 5px;
 }
 .shop-category h2{
     text-align: center;
+    margin:5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }

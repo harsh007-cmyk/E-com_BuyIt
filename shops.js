@@ -313,7 +313,7 @@ const Shops=[{
     id:14,
     category:"Grocery Shops",
     nameOfshop:"Amber's Grocery",
-    imageOfshop:"offer/Grocery/Amber's Grocery.jpg",
+    imageOfshop:"offer/Grocery/Amber's Grocery.webp",
     Data: [{
         name:"Daawat Basmati rice",
         ImageOfitem:"offer/supermarket/Basmati rice.jpeg"

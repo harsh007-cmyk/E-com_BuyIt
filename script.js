@@ -71,7 +71,7 @@ category.forEach(element => {
             imag.src=ele.imageOfshop;
             imag.setAttribute('id',ele.id);
             cardOfshop.appendChild(imag);
-            let nameOfShop=document.createElement('h3');
+            let nameOfShop=document.createElement('p');
             nameOfShop.setAttribute('id',ele.id);
             nameOfShop.innerHTML=ele.nameOfshop;
             cardOfshop.appendChild(nameOfShop);
@@ -163,6 +163,7 @@ const inputBox=document.getElementById('search-input');
 const icon=document.querySelector('.fa-search');
 const listOfsug=document.getElementById('listOfsug');
 inputBox.onkeyup=(e)=>{
+    console.log("Searchbar",e.target.value);
     const searchValue=inputBox.value;
     if(searchValue){
         icon.onclick=()=>{
@@ -226,14 +227,7 @@ inputBox.onkeyup=(e)=>{
 }
 
 function showSug(list){
-    let userData;
-    let listData;
-     if(list.length){
-          userData=inputBox.value;
-          listData=`<li>${userData}</li>`
-     }else{
-     listData=list.join('');
-     }
+    
      console.log(list);
      listOfsug.innerHTML="";
      list.forEach(element => {
